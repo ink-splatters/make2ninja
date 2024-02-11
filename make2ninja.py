@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import re
 import os
 import sys
@@ -8,7 +9,7 @@ import platform
 # consider input from file?
 # consider output to given file?
 # consider option for dep if you know this is done in commands
-# 
+#
 
 file_pattern = "[`'](.+)['']."
 start_target_pattern = " *Considering target file " + file_pattern
@@ -47,7 +48,7 @@ def from_lines(lines):
 
             target_sorted.append(target_name)
             continue
-        
+
         # pruning file, add it as a dep to current target
         match = re.search(pruning_pattern, line)
         if match != None:
